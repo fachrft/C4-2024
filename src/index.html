@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>C4 2024</title>
+        <link rel="stylesheet" href="./output.css" />
+    </head>
+    <body class="h-[400vh]">
+        <!-------------------------- NAVBAR -------------------------------->
+        <nav class="bg-transparent top-0 left-0 w-full flex items-center z-10 \">
+            <div class="container">
+                <div class="flex px-6 font-sans justify-between items-center relative lg:px-10">
+                    <div class="px-2">
+                        <a class="font-semibold text-xl text-black" href=""> Logo </a>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="hamburger absolute right-5 block lg:hidden" type="Button">
+                            <span class="hamburger-line border-2 transition duration-200 ease-in-out origin-top-left"></span>
+                            <span class="hamburger-line border-2 transition duration-200 ease-in-out"></span>
+                            <span class="hamburger-line border-2 transition duration-200 ease-in-out origin-bottom-left"></span>
+                        </button>
+                        <nav class="navMenu hidden absolute max-w-[240px] right-7 w-full py-5 shadow-lg rounded-lg top-9 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                            <ul class="lg:flex">
+                                <li class="group">
+                                    <a href="#" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Home </a>
+                                </li>
+                                <li class="group">
+                                    <a href="#data" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Visualisasi Data </a>
+                                </li>
+                                <li class="group">
+                                    <a href="#edukasi" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Edukasi </a>
+                                </li>
+                                <li class="group">
+                                    <a href="#solusi" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Solusi </a>
+                                </li>
+                                <li class="group">
+                                    <a href="#contact" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Contact </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-------------------------- NAVBAR SELESAI -------------------------------->
+
+        <!-------------------------- HOME -------------------------------->
+        <section class="pt-20">
+            <div class="relative bg-sky-500">
+                <div>
+                    <h1>Hijau Hari Ini</h1>
+                    <p>Mulailah Perjalanan ramah lingkunganmu sekarang!</p>
+                </div>
+                <div class="bg-[url('../assets/hero.png')] bg-cover bg-fixed h-[100vh]"></div>
+            </div>
+        </section>
+        <script src="../script.js"></script>
+    </body>
+</html>
