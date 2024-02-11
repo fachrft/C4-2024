@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: green !important;
+}
+::-webkit-scrollbar-track {
+    background: white !important;
+}
+
 .hamburger-line {
     @apply w-[30px] h-[2px] block my-1.5;
 }

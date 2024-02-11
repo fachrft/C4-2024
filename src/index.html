@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C4 2024</title>
-    <link rel="stylesheet" href="./output.css">
-</head>
-<body>
-    <h1 class="text-4xl">Hello World</h1>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>C4 2024</title>
         <link rel="stylesheet" href="./output.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
     </head>
     <body class="h-[400vh]">
         <!-------------------------- NAVBAR -------------------------------->
-        <nav class="bg-transparent top-0 left-0 w-full flex items-center z-10 \">
+        <nav class="bg-transparent fixed top-0 left-0 w-full flex items-center z-10 h-20">
             <div class="container">
                 <div class="flex px-6 font-sans justify-between items-center relative lg:px-10">
                     <div class="px-2">
@@ -58,15 +49,44 @@
         <!-------------------------- NAVBAR SELESAI -------------------------------->
 
         <!-------------------------- HOME -------------------------------->
-        <section class="pt-20">
-            <div class="relative bg-sky-500">
-                <div>
-                    <h1>Hijau Hari Ini</h1>
-                    <p>Mulailah Perjalanan ramah lingkunganmu sekarang!</p>
+
+        <div class="container overflow-hidden lg:h-[102vh] bg-[#EBEBEB]">
+            <div class="bg-[url('../assets/bg_home_mobile.svg')] lg:bg-[url('../assets/bg_home_desktop.svg')] bg-center bg-cover relative h-[59vh] w-[100vw] lg:h-[125vh] lg:w-[110vw] lg:bg-right">
+                <div class="absolute top-24 text-center w-full lg:top-56 lg:-left-20">
+                    <h1 class="text-center font-semibold text-xl mb-2 lg:text-3xl">Hijau Hari Ini</h1>
+                    <p class="text-center text-xs lg:text-xl">" Mulailah perjalanan lingkunganmu sekarang! "</p>
                 </div>
-                <div class="bg-[url('../assets/hero.png')] bg-cover bg-fixed h-[100vh]"></div>
+            </div>
+        </div>
+
+        <!-------------------------- HOME SELESAI -------------------------------->
+
+        <!-------------------------- PENGERTIAN -------------------------------->
+        <section class="container h-[80vh] bg-[#A8C45E] -translate-y-1 lg:h-[100vh] lg:bg-[#EFF396]">
+            <div class="lg:h-[80vh] lg:bg-[#AAC75B]">
+                <div class="lg:flex lg:justify-between">
+                    <div class="h-[80vh] flex flex-col gap-5 justify-center items-center relative lg:pl-11 lg:pt-12">
+                        <div class="px-10 lg:w-[350px] lg:px-0 lg:text-start lg:absolute lg:top-40 lg:left-52">
+                            <h1 class="font-bold text-2xl mb-3 text-center lg:text-start lg:pl-6">Apa Itu Emisi Karbon??</h1>
+                            <p class="text-center text-lg font-medium">
+                                karbon adalah gas yang keluar dari kendaraan dan pabrik, membuat bumi kita semakin panas. Ini seperti selimut tebal yang membuat bumi 'demam'. Kurangi emisi ini supaya bumi kita sejuk dan nyaman untuk semua makhluk
+                                hidup.
+                            </p>
+                        </div>
+                        <div class="lg:hidden">
+                            <img src="../assets/bunga.svg" alt="" />
+                        </div>
+                        <div class="hidden lg:block">
+                            <img class="w-[700px]" src="../assets/pengertian.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="hidden lg:block lg:pt-40">
+                        <img src="../assets/pengertian_tambahan.svg" alt="" />
+                    </div>
+                </div>
             </div>
         </section>
+        <!-------------------------- PENGERTIAN SELESAI -------------------------------->
         <script src="../script.js"></script>
     </body>
 </html>
