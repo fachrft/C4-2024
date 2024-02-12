@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -43,4 +43,24 @@
 
 .bar-hover:hover:before {
     width: 100%;
+}
+
+@media (max-width: 640px) {
+    .hapus {
+        display: none;
+    }
+}
+
+.bergerak {
+    animation: moveUpDown 1s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
 }
