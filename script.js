@@ -103,3 +103,9 @@ suhuUdara3.addEventListener("click", () => {
         showSu3.classList.add("hidden");
     });
 });
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+});
