@@ -3,15 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>C4 2024</title>
+        <link rel="website icon" type="png" href="../assets/logo.svg" />
+        <title>Zero Cardn</title>
         <link rel="stylesheet" href="./output.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     </head>
 
     <body>
+        <div id="videoContainer" class="loader w-full h-[100%] bg-[#EFF396] flex justify-center items-center fixed top-0 left-0 z-50">
+            <video id="introVideo" width="400" height="350" autoplay muted>
+                <source src="../LOGO CARDN FIXX.mp4" type="video/mp4" />
+            </video>
+            <div id="overlay"></div>
+        </div>
+
         <!-------------------------- NAVBAR -------------------------------->
         <nav class="bg-transparent fixed top-0 left-0 w-full flex items-center z-10 h-20 max-w-[100vw]">
             <div class="container">
@@ -55,9 +64,9 @@
         <!-------------------------- HOME -------------------------------->
         <section class="container overflow-hidden lg:h-[101vh] bg-[#EBEBEB] max-w-[100vw]">
             <div class="bg-[url('../assets/bg_home_mobile.svg')] lg:bg-[url('../assets/bg_home_desktop.svg')] bg-center bg-cover relative h-[59vh] w-[100vw] lg:h-[125vh] lg:w-[110vw] lg:bg-right">
-                <div class="absolute top-24 text-center w-full lg:top-56 lg:-left-20">
-                    <h1 class="text-center font-semibold text-xl mb-2 lg:text-3xl">Hijau Hari Ini</h1>
-                    <p class="text-center text-xs lg:text-xl">" Mulailah perjalanan lingkunganmu sekarang! "</p>
+                <div class="absolute top-24 text-center w-full lg:top-60 lg:-left-20">
+                    <h1 class="text-center font-bold text-xl mb-2 lg:text-5xl">Hijau Hari Ini</h1>
+                    <p class="text-center text-xs lg:text-3xl">" Mulailah perjalanan lingkunganmu sekarang! "</p>
                 </div>
             </div>
         </section>
@@ -65,10 +74,10 @@
         <!-------------------------- HOME SELESAI -------------------------------->
 
         <!-------------------------- PENGERTIAN -------------------------------->
-        <section class="container h-[80vh] bg-[#A8C45E] lg:h-[100vh] lg:bg-[#EFF396] max-w-[100vw]">
+        <section class="container h-[80vh] bg-[#A8C45E] lg:h-[100vh] lg:bg-[#EFF396] max-w-[100vw] overflow-hidden">
             <div class="lg:h-[80vh] lg:bg-[#AAC75B]">
                 <div class="lg:flex lg:justify-between">
-                    <div class="h-[80vh] flex flex-col gap-5 justify-center items-center relative lg:pl-11 lg:pt-12">
+                    <div class="h-[80vh] flex flex-col gap-5 justify-center items-center relative lg:pl-11 lg:pt-12" data-aos="fade-up-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
                         <div class="px-10 lg:w-[350px] lg:px-0 lg:text-start lg:absolute lg:top-40 lg:left-52">
                             <h1 class="font-bold text-2xl mb-3 text-center lg:text-start lg:pl-6">Apa Itu Emisi Karbon??</h1>
                             <p class="text-center text-lg font-medium">
@@ -83,7 +92,7 @@
                             <img class="w-[700px]" src="../assets/pengertian.svg" alt="" />
                         </div>
                     </div>
-                    <div class="hidden lg:block lg:pt-40">
+                    <div class="hidden lg:block lg:pt-40" data-aos="fade-up-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
                         <img src="../assets/pengertian_tambahan.svg" alt="" />
                     </div>
                 </div>
@@ -94,21 +103,26 @@
         <!-------------------------- VISUALISASI DATA -------------------------------->
         <section class="container bg-[#EFF396] overflow-hidden max-w-[100vw]">
             <div class="flex justify-between">
-                <div>
+                <div data-aos="fade-right">
                     <img src="../assets/batang_kiri.svg" alt="" />
                 </div>
-                <div>
+                <div data-aos="fade-left">
                     <img src="../assets/batang_kanan.svg" alt="" />
                 </div>
             </div>
             <div class="relative">
                 <div class="px-14 pt-10 flex flex-col items-center">
-                    <div class="bg-[#D9FDD3] flex justify-center items-center w-[353px] h-[407px] lg:w-[70vw] lg:h-[80vh] lg:justify-start lg:items-end">
+                    <div class="bg-[#D9FDD3] flex justify-center items-center w-[353px] h-[407px] lg:w-[70vw] lg:h-[80vh] lg:justify-start lg:items-end shadow">
                         <img class="-translate-x-6 lg:w-[35vw]" src="../assets/data.svg" alt="" />
                     </div>
                 </div>
                 <div class="relative -top-16 flex justify-center lg:absolute lg:right-[500px] lg:top-20">
-                    <div class="w-[271px] h-[288px] bg-[#FCC359] flex flex-col justify-center items-center gap-3 px-5 text-center z-30 absolute top-0 lg:w-[351px] lg:h-[368px] lg:text-end lg:px-10 shadow">
+                    <div
+                        class="w-[271px] h-[288px] bg-[#FCC359] flex flex-col justify-center items-center gap-3 px-5 text-center z-30 absolute top-0 lg:w-[351px] lg:h-[368px] lg:text-end lg:px-10 shadow"
+                        data-aos="fade-left"
+                        data-aos-offset="200"
+                        data-aos-easing="ease-in-sine"
+                    >
                         <div class="-translate-y-11 lg:translate-y-3 lg:translate-x-32">
                             <img class="lg:" src="../assets/lampu_putih.svg" alt="" />
                         </div>
@@ -120,6 +134,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="w-[100vw] translate-y-14 lg:translate-y-0">
                     <img class="w-[100vw] h-[30vh] lg:h-[60vh]" src="../assets/rumput-bawah.svg" alt="" />
                 </div>
@@ -138,31 +153,35 @@
                 </div>
             </div>
             <div class="flex items-center flex-wrap justify-evenly mb-[80px]">
-                <div class="my-2 w-[322px] lg:w-[396px] relative">
+                <div class="my-2 w-[322px] lg:w-[396px] relative transition-transform duration-700 transform-gpu hover:scale-105">
                     <img src="../assets/kendaraan-motor.svg" alt="" class="object-cover" />
-                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow">
+                    <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow transition-opacity duration-700 ease-in-out"
+                    >
                         <p class="px-6 lg:px-10 text-center text-white">Penggunaan kendaraan pribadi untuk jarak yang dekat dapat meningkatkan emisi karbon karena pembakaran bahan bakar fosil.</p>
                     </div>
                 </div>
-                <div class="my-2 w-[322px] lg:w-[396px] relative b inline-block">
+
+                <div class="my-2 w-[322px] lg:w-[396px] relative b inline-block transition-transform duration-300 transform-gpu hover:scale-105">
                     <img src="../assets/air.svg" alt="" class="object-cover" />
-                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow">
+                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow transition-opacity duration-700">
                         <p class="px-6 lg:px-10 text-white text-center">Penggunaan listrik dan air dalam jumlah besar dapat meningkatkan emisi karbon, terutama jika sumber energi listrik berasal dari bahan bakar fosil.</p>
                     </div>
                 </div>
-                <div class="my-2 w-[322px] lg:w-[396px] relative inline-block lg:mt-16 xl:mb-[64px]">
+
+                <div class="my-2 w-[322px] lg:w-[396px] relative inline-block lg:mt-16 xl:mb-[64px] transition-transform duration-300 transform-gpu hover:scale-105">
                     <img src="../assets/daging.svg" alt="" class="object-cover" />
-                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow">
-                        <p class="px-6 lg:px-10 text-center text-white">Pilihan makanan kita mempengaruhi emisi karbon, dimana produksi makanan tertentu, seperti daging, menghasilkan lebih banyak emisi dibandingkan dengan tanaman</p>
+                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow transition-opacity duration-700">
+                        <p class="px-6 lg:px-10 text-center text-white">Pilihan makanan kita mempengaruhi emisi karbon, dimana produksi makanan tertentu, seperti daging, menghasilkan lebih banyak emisi dibandingkan dengan tanaman.</p>
                     </div>
                 </div>
             </div>
 
             <div class="flex justify-between">
-                <div class="">
+                <div class="" data-aos="fade-right">
                     <img src="../assets/batang_kiri.svg" alt="" />
                 </div>
-                <div>
+                <div data-aos="fade-left">
                     <img src="../assets/batang_kanan.svg" alt="" />
                 </div>
             </div>
@@ -224,9 +243,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Perubahan Iklim : Memicu perubahan cuaca global, dari pola hujan hingga suhu</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold">Close</button>
             </div>
         </div>
         <!-- CARD 1 SELESAI -->
@@ -240,9 +257,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Mencairnya Es Kutub : Menyebabkan naiknya permukaan laut, mengancam habitat.</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold">Close</button>
             </div>
         </div>
         <!-- CARD 2 SELESAI -->
@@ -256,9 +271,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menimbulkan Kebakaran Hutan : Menyebabkan kerusakan ekosistem dan hilangnya habitat</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold">Close</button>
             </div>
         </div>
         <!-- CARD 3 SELESAI -->
@@ -274,9 +287,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menyebabkan Kanker Paru-Paru : Paparan polusi udara berkepanjangan bisa tingkatkan risiko kanker paru akibat zat karsinogenik.</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold">Close</button>
             </div>
         </div>
         <!-- CARD 1 SELESAI -->
@@ -290,9 +301,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menyebabkan ASMA : Menimbulklan penyakit paru-obstruktif kronis & infeksi pernapasan</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold">Close</button>
             </div>
         </div>
         <!-- CARD 2 SELESAI -->
@@ -306,9 +315,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menyebabkan ISPA : Gas polutan (NO2) & (O3) dapat memperburuk ISPA & meningkatkan risiko batuk dan pilek.</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold">Close</button>
             </div>
         </div>
         <!-- CARD 3 SELESAI -->
@@ -388,14 +395,20 @@
                 <div class="px-10 mb-20">
                     <h1 class="font-semibold">Lihat Penjelasannya</h1>
                 </div>
-                <div class="relative border-2 border-black">
+                <div class="relative">
                     <img src="../assets/handphone.svg" alt="" />
                 </div>
             </div>
         </section>
         <!-------------------------- PROTOTYPE SELESAI --------------------------------->
 
+        <script>
+            AOS.init({
+                once: true,
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="../script.js"></script>
     </body>
 </html>
