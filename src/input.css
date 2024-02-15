@@ -4,6 +4,7 @@
 
 * {
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -49,6 +50,10 @@
     .hapus {
         display: none;
     }
+
+    .prorotype-desktop {
+        display: none;
+    }
 }
 
 .bergerak {
@@ -77,4 +82,27 @@
     to {
         transform: translateY(-100%);
     }
+}
+
+.container-penjelasan {
+    left: -100%;
+}
+
+.open-penjelasan {
+    left: 0;
+}
+
+.footer-hover:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2.3px;
+    background-color: white;
+    width: 0;
+    border-radius: 50%;
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-hover:hover:before {
+    width: 100%;
 }

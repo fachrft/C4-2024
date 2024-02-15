@@ -94,6 +94,7 @@ suhuUdara2.addEventListener("click", () => {
     document.querySelector("body").style = "overflow-y: hidden;";
 
     const close = document.querySelector(".close");
+
     showSu2.addEventListener("click", () => {
         showSu2.classList.add("hidden");
         document.querySelector("body").style = "overflow-y: auto;";
@@ -141,3 +142,122 @@ function toggleGordeng(isInit = false) {
 }
 
 toggleGordeng(true);
+
+//open penjelasan
+const button = document.querySelector(".button-open-close");
+const isiButton = document.querySelector(".isi-button");
+const containerPenjelasan = document.querySelector(".container-penjelasan");
+
+button.addEventListener("click", () => {
+    containerPenjelasan.classList.toggle("open-penjelasan");
+    if (containerPenjelasan.classList.contains("open-penjelasan")) {
+        isiButton.innerHTML = "Close";
+    } else {
+        isiButton.innerHTML = "Lihat Penjelasannya";
+    }
+});
+
+// pop up penjelasan
+const ramahPengguna = document.querySelector(".button-ramah-pengguna");
+const aksesibilitas = document.querySelector('.button-aksesibilitas');
+const penyesuaian = document.querySelector('.button-penyesuaian');
+const pelacakan = document.querySelector('.button-pelacakan');
+const feedback = document.querySelector('.button-feedback');
+const integrasi = document.querySelector('.button-integrasi');
+
+const showP1 = document.querySelector(".show-prototype-1");
+const showP2 = document.querySelector(".show-prototype-2")
+const showP3 = document.querySelector(".show-prototype-3")
+const showP4 = document.querySelector(".show-prototype-4")
+const showP5 = document.querySelector(".show-prototype-5")
+const showP6 = document.querySelector(".show-prototype-6")
+
+// show 1
+ramahPengguna.addEventListener("click", () => {
+    const close = document.querySelector(".close");
+    showP1.classList.remove("hidden");
+
+    close.addEventListener("click", () => {
+        showP1.classList.add("hidden");
+    });
+
+    showP1.addEventListener("click", () => {
+        showP1.classList.add("hidden");
+    });
+});
+aksesibilitas.addEventListener("click", () => {
+    const close = document.querySelector(".close");
+    showP2.classList.remove("hidden");
+    document.querySelector("body").style = "overflow-y: hidden;";
+
+    close.addEventListener("click", () => {
+        showP2.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+
+    showP2.addEventListener("click", () => {
+        showP2.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+});
+penyesuaian.addEventListener("click", () => {
+    const close = document.querySelector(".close");
+    showP3.classList.remove("hidden");
+    document.querySelector("body").style = "overflow-y: hidden;";
+
+    close.addEventListener("click", () => {
+        showP3.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+
+    showP3.addEventListener("click", () => {
+        showP3.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+});
+pelacakan.addEventListener("click", () => {
+    const close = document.querySelector(".close");
+    showP4.classList.remove("hidden");
+    document.querySelector("body").style = "overflow-y: hidden;";
+
+    close.addEventListener("click", () => {
+        showP4.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+
+    showP4.addEventListener("click", () => {
+        showP4.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+});
+feedback.addEventListener("click", () => {
+    const close = document.querySelector(".close");
+    showP5.classList.remove("hidden");
+    document.querySelector("body").style = "overflow-y: hidden;";
+
+    close.addEventListener("click", () => {
+        showP5.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+
+    showP5.addEventListener("click", () => {
+        showP5.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+});
+integrasi.addEventListener("click", () => {
+    const close = document.querySelector(".close");
+    showP6.classList.remove("hidden");
+    document.querySelector("body").style = "overflow-y: hidden;";
+
+    close.addEventListener("click", () => {
+        showP6.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+
+    showP6.addEventListener("click", () => {
+        showP6.classList.add("hidden");
+        document.querySelector("body").style = "overflow-y: auto;";
+    });
+});
+
