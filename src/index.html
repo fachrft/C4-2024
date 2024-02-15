@@ -3,21 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>C4 2024</title>
+        <link rel="website icon" type="png" href="../assets/logo.svg" />
+        <title>Zero Cardn</title>
         <link rel="stylesheet" href="./output.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body>
+    <body class="overflow-x-hidden">
+        <!-------------------------- GORDENG -------------------------------->
+        <div id="videoContainer" class="loader w-full h-[100%] bg-[#EFF396] flex justify-center items-center fixed top-0 left-0 z-[100]">
+            <video id="introVideo" width="400" height="350" autoplay muted>
+                <source src="../LOGO CARDN FIXX.mp4" type="video/mp4" />
+            </video>
+            <div id="overlay"></div>
+        </div>
+        <!-------------------------- GORDENG SELESAI -------------------------------->
+
         <!-------------------------- NAVBAR -------------------------------->
-        <nav class="bg-transparent fixed top-0 left-0 w-full flex items-center z-10 h-20 max-w-[100vw]">
+        <nav class="bg-transparent fixed top-0 left-0 w-full flex items-center z-[90] h-20 max-w-[100vw]">
             <div class="container">
                 <div class="flex px-5 font-sans justify-between items-center relative lg:px-10">
                     <div class="">
-                        <a class="font-semibold text-xl text-black" href="">
+                        <a class="font-semibold text-xl text-black" href="#home">
                             <img width="50px" src="../assets/logo.svg" alt="" />
                         </a>
                     </div>
@@ -27,10 +39,10 @@
                             <span class="hamburger-line border-2 transition duration-200 ease-in-out"></span>
                             <span class="hamburger-line border-2 transition duration-200 ease-in-out origin-bottom-left"></span>
                         </button>
-                        <nav class="navMenu hidden absolute max-w-[240px] right-7 w-full py-5 shadow-lg rounded-lg top-9 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+                        <nav class="navMenu bg-white hidden absolute max-w-[240px] right-7 w-full py-5 shadow-lg rounded-lg top-9 lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                             <ul class="lg:flex">
                                 <li class="group">
-                                    <a href="#" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Home </a>
+                                    <a href="#home" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Home </a>
                                 </li>
                                 <li class="group">
                                     <a href="#data" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Visualisasi Data </a>
@@ -42,7 +54,7 @@
                                     <a href="#solusi" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Solusi </a>
                                 </li>
                                 <li class="group">
-                                    <a href="#contact" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Contact </a>
+                                    <a href="#prototype" class="bar-hover text-base py-2 mx-7 flex lg:black font-semibold relative"> Prorotype </a>
                                 </li>
                             </ul>
                         </nav>
@@ -53,11 +65,11 @@
         <!-------------------------- NAVBAR SELESAI -------------------------------->
 
         <!-------------------------- HOME -------------------------------->
-        <section class="container overflow-hidden lg:h-[101vh] bg-[#EBEBEB] max-w-[100vw]">
+        <section class="container overflow-hidden lg:h-[101vh] bg-[#EBEBEB] max-w-[100vw]" id="home">
             <div class="bg-[url('../assets/bg_home_mobile.svg')] lg:bg-[url('../assets/bg_home_desktop.svg')] bg-center bg-cover relative h-[59vh] w-[100vw] lg:h-[125vh] lg:w-[110vw] lg:bg-right">
-                <div class="absolute top-24 text-center w-full lg:top-56 lg:-left-20">
-                    <h1 class="text-center font-semibold text-xl mb-2 lg:text-3xl">Hijau Hari Ini</h1>
-                    <p class="text-center text-xs lg:text-xl">" Mulailah perjalanan lingkunganmu sekarang! "</p>
+                <div class="absolute top-24 text-center w-full lg:top-60 lg:-left-20">
+                    <h1 class="text-center font-bold text-xl mb-2 lg:text-5xl">Hijau Hari Ini</h1>
+                    <p class="text-center text-xs lg:text-3xl">" Mulailah perjalanan lingkunganmu sekarang! "</p>
                 </div>
             </div>
         </section>
@@ -65,10 +77,10 @@
         <!-------------------------- HOME SELESAI -------------------------------->
 
         <!-------------------------- PENGERTIAN -------------------------------->
-        <section class="container h-[80vh] bg-[#A8C45E] lg:h-[100vh] lg:bg-[#EFF396] max-w-[100vw]">
+        <section class="container h-[80vh] bg-[#A8C45E] lg:h-[100vh] lg:bg-[#EFF396] max-w-[100vw] overflow-hidden">
             <div class="lg:h-[80vh] lg:bg-[#AAC75B]">
                 <div class="lg:flex lg:justify-between">
-                    <div class="h-[80vh] flex flex-col gap-5 justify-center items-center relative lg:pl-11 lg:pt-12">
+                    <div class="h-[80vh] flex flex-col gap-5 justify-center items-center relative lg:pl-11 lg:pt-12" data-aos="fade-up-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
                         <div class="px-10 lg:w-[350px] lg:px-0 lg:text-start lg:absolute lg:top-40 lg:left-52">
                             <h1 class="font-bold text-2xl mb-3 text-center lg:text-start lg:pl-6">Apa Itu Emisi Karbon??</h1>
                             <p class="text-center text-lg font-medium">
@@ -83,7 +95,7 @@
                             <img class="w-[700px]" src="../assets/pengertian.svg" alt="" />
                         </div>
                     </div>
-                    <div class="hidden lg:block lg:pt-40">
+                    <div class="hidden lg:block lg:pt-40" data-aos="fade-up-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
                         <img src="../assets/pengertian_tambahan.svg" alt="" />
                     </div>
                 </div>
@@ -92,23 +104,28 @@
         <!-------------------------- PENGERTIAN SELESAI -------------------------------->
 
         <!-------------------------- VISUALISASI DATA -------------------------------->
-        <section class="container bg-[#EFF396] overflow-hidden max-w-[100vw]">
+        <section class="container bg-[#EFF396] overflow-hidden max-w-[100vw]" id="data">
             <div class="flex justify-between">
-                <div>
+                <div data-aos="fade-right">
                     <img src="../assets/batang_kiri.svg" alt="" />
                 </div>
-                <div>
+                <div data-aos="fade-left">
                     <img src="../assets/batang_kanan.svg" alt="" />
                 </div>
             </div>
             <div class="relative">
                 <div class="px-14 pt-10 flex flex-col items-center">
-                    <div class="bg-[#D9FDD3] flex justify-center items-center w-[353px] h-[407px] lg:w-[70vw] lg:h-[80vh] lg:justify-start lg:items-end">
+                    <div class="bg-[#D9FDD3] flex justify-center items-center w-[353px] h-[407px] lg:w-[70vw] lg:h-[80vh] lg:justify-start lg:items-end shadow">
                         <img class="-translate-x-6 lg:w-[35vw]" src="../assets/data.svg" alt="" />
                     </div>
                 </div>
                 <div class="relative -top-16 flex justify-center lg:absolute lg:right-[500px] lg:top-20">
-                    <div class="w-[271px] h-[288px] bg-[#FCC359] flex flex-col justify-center items-center gap-3 px-5 text-center z-30 absolute top-0 lg:w-[351px] lg:h-[368px] lg:text-end lg:px-10 shadow">
+                    <div
+                        class="w-[271px] h-[288px] bg-[#FCC359] flex flex-col justify-center items-center gap-3 px-5 text-center z-30 absolute top-0 lg:w-[351px] lg:h-[368px] lg:text-end lg:px-10 shadow"
+                        data-aos="fade-left"
+                        data-aos-offset="200"
+                        data-aos-easing="ease-in-sine"
+                    >
                         <div class="-translate-y-11 lg:translate-y-3 lg:translate-x-32">
                             <img class="lg:" src="../assets/lampu_putih.svg" alt="" />
                         </div>
@@ -120,6 +137,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="w-[100vw] translate-y-14 lg:translate-y-0">
                     <img class="w-[100vw] h-[30vh] lg:h-[60vh]" src="../assets/rumput-bawah.svg" alt="" />
                 </div>
@@ -131,38 +149,42 @@
         <!-------------------------- VISUALISASI DATA SELESAI -------------------------------->
 
         <!-------------------------- DAMPAK EMISI KARBON -------------------------------->
-        <section class="container bg-[#EFF396] overflow-hidden max-w-[100vw]">
+        <section class="container bg-[#EFF396] overflow-hidden max-w-[100vw]" id="edukasi">
             <div class="flex flex-col justify-center items-center gap-10 pt-10 lg:items-start">
                 <div class="bg-[#FCC359] mx-auto mb-16 rounded-t-full flex justify-center items-center h-[52px] w-[304px] lg:mb-24 lg:w-[430px] lg:rounded-br-full shadow">
                     <h1 class="font-semibold text-lg lg:text-2xl">Pemicu Terjadinya Sampah</h1>
                 </div>
             </div>
             <div class="flex items-center flex-wrap justify-evenly mb-[80px]">
-                <div class="my-2 w-[322px] lg:w-[396px] relative">
+                <div class="my-2 w-[322px] lg:w-[396px] relative transition-transform duration-700 transform-gpu hover:scale-105">
                     <img src="../assets/kendaraan-motor.svg" alt="" class="object-cover" />
-                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow">
+                    <div
+                        class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow transition-opacity duration-700 ease-in-out"
+                    >
                         <p class="px-6 lg:px-10 text-center text-white">Penggunaan kendaraan pribadi untuk jarak yang dekat dapat meningkatkan emisi karbon karena pembakaran bahan bakar fosil.</p>
                     </div>
                 </div>
-                <div class="my-2 w-[322px] lg:w-[396px] relative b inline-block">
+
+                <div class="my-2 w-[322px] lg:w-[396px] relative b inline-block transition-transform duration-300 transform-gpu hover:scale-105">
                     <img src="../assets/air.svg" alt="" class="object-cover" />
-                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow">
+                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow transition-opacity duration-700">
                         <p class="px-6 lg:px-10 text-white text-center">Penggunaan listrik dan air dalam jumlah besar dapat meningkatkan emisi karbon, terutama jika sumber energi listrik berasal dari bahan bakar fosil.</p>
                     </div>
                 </div>
-                <div class="my-2 w-[322px] lg:w-[396px] relative inline-block lg:mt-16 xl:mb-[64px]">
+
+                <div class="my-2 w-[322px] lg:w-[396px] relative inline-block lg:mt-16 xl:mb-[64px] transition-transform duration-300 transform-gpu hover:scale-105">
                     <img src="../assets/daging.svg" alt="" class="object-cover" />
-                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow">
-                        <p class="px-6 lg:px-10 text-center text-white">Pilihan makanan kita mempengaruhi emisi karbon, dimana produksi makanan tertentu, seperti daging, menghasilkan lebih banyak emisi dibandingkan dengan tanaman</p>
+                    <div class="absolute inset-0 bg-gray-900 opacity-0 hover:opacity-80 hover:w-[322px] hover:h-[220px] lg:hover:w-[386px] lg:hover:h-[267px] flex justify-center items-center cursor-pointer shadow transition-opacity duration-700">
+                        <p class="px-6 lg:px-10 text-center text-white">Pilihan makanan kita mempengaruhi emisi karbon, dimana produksi makanan tertentu, seperti daging, menghasilkan lebih banyak emisi dibandingkan dengan tanaman.</p>
                     </div>
                 </div>
             </div>
 
             <div class="flex justify-between">
-                <div class="">
+                <div class="" data-aos="fade-right">
                     <img src="../assets/batang_kiri.svg" alt="" />
                 </div>
-                <div>
+                <div data-aos="fade-left">
                     <img src="../assets/batang_kanan.svg" alt="" />
                 </div>
             </div>
@@ -174,7 +196,7 @@
             </div>
 
             <div class="pt-10 flex flex-col justify-center items-center gap-14 lg:flex-row lg:gap-0">
-                <div class="border-aja bg-[#FCC359] w-72 h-[400px] flex flex-col justify-center items-center gap-2 px-7 rounded-b-xl rounded-t-full lg:w-96 lg:h-[550px] shadow">
+                <div class="border-aja bg-[#FCC359] w-72 h-[400px] flex flex-col justify-center items-center gap-2 px-7 rounded-b-xl rounded-t-full lg:w-96 lg:h-[550px] shadow" data-aos="fade-left">
                     <div class="pt-10">
                         <img class="lg:w-[240px] lg:h-[205px]" src="../assets/global_warming.svg" alt="" />
                     </div>
@@ -187,10 +209,8 @@
                         <img class="bergerak w-[90px] cursor-pointer lg:w-[120px] globalWarming3" src="../assets/gw_3.svg" alt="" />
                     </div>
                 </div>
-
                 <div class="bg-[#966B49] translate-y-24 h-[360px] w-1 hidden lg:block"></div>
-
-                <div class="border-aja bg-[#FCC359] w-72 h-[400px] flex flex-col justify-center items-center gap-2 px-7 rounded-b-xl rounded-t-full lg:w-96 lg:h-[550px] shadow">
+                <div class="border-aja bg-[#FCC359] w-72 h-[400px] flex flex-col justify-center items-center gap-2 px-7 rounded-b-xl rounded-t-full lg:w-96 lg:h-[550px] shadow" data-aos="fade-right">
                     <div class="">
                         <img class="lg:w-[240px] lg:h-[205px]" src="../assets/suhu_udara.svg" alt="" />
                     </div>
@@ -224,9 +244,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Perubahan Iklim : Memicu perubahan cuaca global, dari pola hujan hingga suhu</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
             </div>
         </div>
         <!-- CARD 1 SELESAI -->
@@ -240,9 +258,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Mencairnya Es Kutub : Menyebabkan naiknya permukaan laut, mengancam habitat.</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
             </div>
         </div>
         <!-- CARD 2 SELESAI -->
@@ -256,9 +272,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menimbulkan Kebakaran Hutan : Menyebabkan kerusakan ekosistem dan hilangnya habitat</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
             </div>
         </div>
         <!-- CARD 3 SELESAI -->
@@ -274,9 +288,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menyebabkan Kanker Paru-Paru : Paparan polusi udara berkepanjangan bisa tingkatkan risiko kanker paru akibat zat karsinogenik.</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
             </div>
         </div>
         <!-- CARD 1 SELESAI -->
@@ -290,9 +302,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menyebabkan ASMA : Menimbulklan penyakit paru-obstruktif kronis & infeksi pernapasan</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer hover:text-black">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
             </div>
         </div>
         <!-- CARD 2 SELESAI -->
@@ -306,9 +316,7 @@
                 <div>
                     <p class="text-xl font-semibold text-center">Menyebabkan ISPA : Gas polutan (NO2) & (O3) dapat memperburuk ISPA & meningkatkan risiko batuk dan pilek.</p>
                 </div>
-                <div class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 hover:bg-white group">
-                    <h1 class="close text-white font-semibold cursor-pointer">Close</h1>
-                </div>
+                <button class="bg-red-600 px-5 py-1 rounded-full absolute bottom-8 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
             </div>
         </div>
         <!-- CARD 3 SELESAI -->
@@ -316,7 +324,7 @@
         <!-- SUHU UDARA SELESAI -->
 
         <!-------------------------- SOLUSI --------------------------------->
-        <section class="bg-[#EFF396] h-[100vh] max-w-[100vw]">
+        <section class="bg-[#EFF396] h-[100vh] max-w-[100vw]" id="solusi">
             <div class="flex flex-col gap-10 lg:flex-row lg:px-32 lg:gap-0">
                 <div class="pt-10 px-8 lg:w-[40vw]">
                     <div class="mb-3 lg:mb-6">
@@ -330,7 +338,7 @@
                     </div>
                 </div>
                 <div class="swiper mySwiper w-[300px] h-[400px] lg:w-[400px] lg:h-[500px]">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" data-aos="fade-left">
                         <div class="swiper-slide flex justify-center items-center rounded-xl shadow">
                             <div class="w-[300px] h-[400px] bg-[#D9FDD3] flex flex-col pt-20 gap-5 items-center px-7 lg:w-[400px] lg:h-[500px] lg:px-12">
                                 <div>
@@ -382,20 +390,215 @@
         </section>
         <!-------------------------- SOLUSI SELESAI --------------------------------->
 
-        <!-------------------------- PROTOTYPE --------------------------------->
-        <section class="bg-[#EFF396] h-[100vh] max-w-[100vw]">
-            <div>
+        <!-------------------------- PROTOTYPE MOBILE --------------------------------->
+        <section class="bg-[#EFF396] h-[100vh] max-w-[100vw] lg:hidden">
+            <div class="relative">
                 <div class="px-10 mb-20">
-                    <h1 class="font-semibold">Lihat Penjelasannya</h1>
+                    <div class="button-open-close border-2 border-yellow-400 w-[188px] h-[40px] flex justify-center items-center rounded-xl hover:bg-[#FCC359] transition-all duration-300">
+                        <h1 class="font-semibold isi-button">Lihat Penjelasannya</h1>
+                    </div>
                 </div>
-                <div class="relative border-2 border-black">
+                <div class="container-penjelasan px-6 pt-6 absolute flex flex-col gap-3 transition-all duration-700">
+                    <div class="button-ramah-pengguna w-[225px] h-[60px] flex justify-center items-center px-5 bg-[#FAFAFA] rounded-xl shadow">
+                        <h1 class="text-center font-semibold text-lg">Desain Ramah Pengguna</h1>
+                    </div>
+                    <div class="button-aksesibilitas w-[225px] h-[60px] flex justify-center items-center px-5 bg-[#FAFAFA] rounded-xl shadow">
+                        <h1 class="text-center font-semibold text-lg">Aksesibilitas Tinggi</h1>
+                    </div>
+                    <div class="button-penyesuaian w-[225px] h-[60px] flex justify-center items-center px-5 bg-[#FAFAFA] rounded-xl shadow">
+                        <h1 class="text-center font-semibold text-lg">Penyesuaian Personal</h1>
+                    </div>
+                    <div class="button-pelacakan w-[225px] h-[60px] flex justify-center items-center px-5 bg-[#FAFAFA] rounded-xl shadow">
+                        <h1 class="text-center font-semibold text-lg">Pelacakan kemajuan</h1>
+                    </div>
+                    <div class="button-feedback w-[225px] h-[60px] flex justify-center items-center px-5 bg-[#FAFAFA] rounded-xl shadow">
+                        <h1 class="text-center font-semibold text-lg">Feedback Instan</h1>
+                    </div>
+                    <div class="button-integrasi w-[225px] h-[60px] flex justify-center items-center px-5 bg-[#FAFAFA] rounded-xl shadow">
+                        <h1 class="text-center font-semibold text-lg">Integrasi Sosial</h1>
+                    </div>
+                </div>
+                <div class="">
                     <img src="../assets/handphone.svg" alt="" />
+                </div>
+            </div>
+        </section>
+        <!-------------------------- PROTOTYPE MOBILE SELESAI SELESAI --------------------------------->
+
+        <!-- CARD PROTOTYPE -->
+        <!-- CARD PROTOTYPR 1 -->
+        <div class="show-prototype-1 h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden overflow-hidden">
+            <div class="bg-[#FCC359] w-[314px] h-[337px] lg:w-[364px] lg:h-[437px] rounded-xl flex flex-col gap-3 lg:gap-10 px-7 py-5 items-center relative shadow">
+                <div class="pt-5">
+                    <h1 class="text-2xl font-semibold pr-10">Desain Ramah Pengguna</h1>
+                </div>
+                <div>
+                    <p class="text-md">Didesain dengan visual menarik dan navigasi simpel, kalkulator ini memudahkan pemahaman dan pengelolaan jejak karbon secara efektif</p>
+                </div>
+                <button class="bg-[#F16161] px-5 py-1 rounded-full absolute w-[89px] h-[40px] bottom-7 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
+            </div>
+        </div>
+        <!-- CARD PROTOTOTYPE 2 -->
+        <div class="show-prototype-2 h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden overflow-hidden">
+            <div class="bg-[#FCC359] w-[314px] h-[337px] lg:w-[364px] lg:h-[437px] rounded-xl flex flex-col gap-3 lg:gap-10 px-7 py-5 items-center relative shadow">
+                <div class="pt-5">
+                    <h1 class="text-2xl font-bold pr-10">Aksesibilitas Tinggi</h1>
+                </div>
+                <div>
+                    <p class="text-md">Dengan tata letak yang mudah dipahami dan instruksi yang detail, tool ini mempermudah siapa saja untuk menghitung jejak karbon mereka tanpa kesulitan</p>
+                </div>
+                <button class="bg-[#F16161] px-5 py-1 rounded-full absolute w-[89px] h-[40px] bottom-7 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
+            </div>
+        </div>
+        <!-- CARD PROTOTYPE 3 -->
+        <div class="show-prototype-3 h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden overflow-hidden">
+            <div class="bg-[#FCC359] w-[314px] h-[337px] lg:w-[364px] lg:h-[437px] rounded-xl flex flex-col gap-3 lg:gap-10 px-7 py-5 items-center relative shadow">
+                <div class="pt-5">
+                    <h1 class="text-2xl font-bold pr-10">Penyesuaian Personal</h1>
+                </div>
+                <div>
+                    <p class="text-md">Kalkulator ini menyediakan opsi untuk memasukkan detail aktivitas sehari-hari pengguna, memberikan hasil yang sesuai dengan realita kehidupan pengguna</p>
+                </div>
+                <button class="bg-[#F16161] px-5 py-1 rounded-full absolute w-[89px] h-[40px] bottom-7 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
+            </div>
+        </div>
+        <!-- CARD PROTOTYPE 4 -->
+        <div class="show-prototype-4 h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden overflow-hidden">
+            <div class="bg-[#FCC359] w-[314px] h-[337px] lg:w-[364px] lg:h-[437px] rounded-xl flex flex-col gap-3 lg:gap-10 px-7 py-5 items-center relative shadow">
+                <div class="pt-5">
+                    <h1 class="text-2xl font-bold pr-10">Pelacakan Kemajuan</h1>
+                </div>
+                <div>
+                    <p class="text-md">Memungkinkan pengguna menyimpan & membandingkan hasil seiring waktu, menunjukkan kemajuan dalam mengurangi jejak karbon mereka</p>
+                </div>
+                <button class="bg-[#F16161] px-5 py-1 rounded-full absolute w-[89px] h-[40px] bottom-7 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
+            </div>
+        </div>
+        <!-- CARD PROTOTYPE 5 -->
+        <div class="show-prototype-5 h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden overflow-hidden">
+            <div class="bg-[#FCC359] w-[314px] h-[337px] lg:w-[364px] lg:h-[437px] rounded-xl flex flex-col gap-3 lg:gap-10 px-7 py-5 items-center relative shadow">
+                <div class="pt-5">
+                    <h1 class="text-2xl font-bold pr-16">Feedback Instan</h1>
+                </div>
+                <div>
+                    <p class="text-md">Memberikan hasil dan feedback langsung setelah data dimasukkan, dan dapat memotivasi perubahan ke arah perilaku ramah lingkungan.</p>
+                </div>
+                <button class="bg-[#F16161] px-5 py-1 rounded-full absolute w-[89px] h-[40px] bottom-7 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
+            </div>
+        </div>
+        <!-- CARD PROTOTYPE 6 -->
+        <div class="show-prototype-6 h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 hidden overflow-hidden">
+            <div class="bg-[#FCC359] w-[314px] h-[337px] lg:w-[364px] lg:h-[437px] rounded-xl flex flex-col gap-3 lg:gap-10 px-7 py-5 items-center relative shadow">
+                <div class="pt-5">
+                    <h1 class="text-2xl font-bold pr-20">Integrasi Sosial</h1>
+                </div>
+                <div>
+                    <p class="text-md">Pengguna dapat membagikan hasil kalkulasi jejak karbon mereka ke media sosial, mendorong diskusi dan kesadaran kolektif tentang pentingnya mengurangi emisi karbon</p>
+                </div>
+                <button class="bg-[#F16161] px-5 py-1 rounded-full absolute w-[89px] h-[40px] bottom-5 right-10 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">Close</button>
+            </div>
+        </div>
+
+        <!-------------------------- PROTOTYPE DESKTOP --------------------------------->
+        <section class="bg-[#EFF396] h-[100vh] max-w-[100vw] prorotype-desktop" id="prototype">
+            <div class="flex justify-center items-center">
+                <div class="flex flex-col gap-10">
+                    <div class="w-[355px] h-[167px] bg-[#fafafa] flex flex-col px-7 justify-center gap-3 rounded-xl shadow hover:bg-[#FEC55A] transition-all duration-500 ease-in-out" data-aos="fade-left" data-aos-duration="1100">
+                        <h1 class="text-xl font-semibold">Desain Ramah Pengguna</h1>
+                        <p class="text-sm">Didesain dengan visual menarik dan navigasi simpel, kalkulator ini memudahkan pemahaman dan pengelolaan jejak karbon secara efektif</p>
+                    </div>
+                    <div
+                        class="w-[355px] h-[167px] bg-[#fafafa] flex flex-col px-7 justify-center gap-3 rounded-xl shadow hover:bg-[#FEC55A] transition-all duration-500 ease-in-out cursor-pointer"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="1200"
+                    >
+                        <h1 class="text-xl font-semibold">Aksesibilitas Tinggi</h1>
+                        <p class="text-sm">Dengan tata letak yang mudah dipahami dan instruksi yang detail, tool ini mempermudah siapa saja untuk menghitung jejak karbon mereka tanpa kesulitan</p>
+                    </div>
+                    <div class="w-[355px] h-[167px] bg-[#fafafa] flex flex-col px-7 justify-center gap-3 rounded-xl shadow hover:bg-[#FEC55A] transition-all duration-500 ease-in-out cursor-pointer" data-aos="fade-right" data-aos-duration="1300">
+                        <h1 class="text-xl font-semibold">Penyesuaian Personal</h1>
+                        <p class="text-sm">Kalkulator ini menyediakan opsi untuk memasukkan detail aktivitas sehari-hari pengguna, memberikan hasil yang sesuai dengan realita kehidupan pengguna</p>
+                    </div>
+                </div>
+                <div>
+                    <img cl src="../assets/handphone.svg" alt="" />
+                </div>
+                <div class="flex flex-col gap-10">
+                    <div class="w-[355px] h-[167px] bg-[#fafafa] flex flex-col px-7 justify-center gap-3 rounded-xl shadow hover:bg-[#FEC55A] transition-all duration-500 ease-in-out cursor-pointer" data-aos="fade-left" data-aos-duration="1300">
+                        <h1 class="text-xl font-semibold">Pelacakan Kemajuan</h1>
+                        <p class="text-sm">Memungkinkan pengguna menyimpan & membandingkan hasil seiring waktu, menunjukkan kemajuan dalam mengurangi jejak karbon mereka</p>
+                    </div>
+                    <div
+                        class="w-[355px] h-[167px] bg-[#fafafa] flex flex-col px-7 justify-center gap-3 rounded-xl shadow hover:bg-[#FEC55A] transition-all duration-500 ease-in-out cursor-pointer"
+                        data-aos="fade-up"
+                        data-aos-anchor-placement="top-bottom"
+                        data-aos-duration="1200"
+                    >
+                        <h1 class="text-xl font-semibold">Feedback Instan</h1>
+                        <p class="text-sm">Memberikan hasil dan feedback langsung setelah data dimasukkan, dan dapat memotivasi perubahan ke arah perilaku ramah lingkungan.</p>
+                    </div>
+                    <div class="w-[355px] h-[167px] bg-[#fafafa] flex flex-col px-7 justify-center gap-3 rounded-xl shadow hover:bg-[#FEC55A] transition-all duration-500 ease-in-out cursor-pointer" data-aos="fade-right" data-aos-duration="1100">
+                        <h1 class="text-xl font-semibold">Integrasi Sosial</h1>
+                        <p class="text-sm">Pengguna dapat membagikan hasil kalkulasi jejak karbon mereka ke media sosial, mendorong diskusi dan kesadaran kolektif tentang pentingnya mengurangi emisi karbon</p>
+                    </div>
                 </div>
             </div>
         </section>
         <!-------------------------- PROTOTYPE SELESAI --------------------------------->
 
+        <!-- FOOTER AWAL -->
+        <footer class="bg-[#EFF396] max-w-[100vw]">
+            <div class="w-full">
+                <img src="../assets/footer-dekstop.svg" alt="" class="w-full translate-y-1" />
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3 sm:w-screen md:w-screen text-white bg-[#2C5746] overflow-visible text-center pt-10">
+                    <div class="flex flex-col space-y-3 lg:mt-9 text-[20px]">
+                        <h2 class="font-bold">Menu</h2>
+                        <a class="" href="">About us</a>
+                        <a href="">Latar Belakang</a>
+                        <a href="">Solusi</a>
+                        <a href="">Edukasi</a>
+                    </div>
+                    <div class="flex flex-col space-y-3 mt-[34px] text-[20px]">
+                        <h2 class="font-bold">Anggota Team</h2>
+                        <p>Ananda Aulia Damayanti</p>
+                        <p>Syifa Yumna</p>
+                        <p>Fachrifat Zhafran Triyadi</p>
+                        <p>Habibi Widayanto</p>
+                        <p>Shugeru Marcello Wirya</p>
+                    </div>
+                    <div class="flex flex-col space-y-3 mt-[34px] text-[20px] mb-4">
+                        <h2 class="text-2xl font-bold">Job Team</h2>
+                        <p>Programmer</p>
+                        <p>Programmer</p>
+                        <p>Programmer</p>
+                        <p>Programmer</p>
+                        <p>Programmer</p>
+                    </div>
+                    <div class="flex items-center mx-auto mb-8">
+                        <!-- Gmail -->
+                        <a href="" target="_blank">
+                            <img src="../assets/ig.svg" alt="" class="mr-3" />
+                        </a>
+                        <a href="" target="_blank">
+                            <img src="../assets/gmail.svg" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-[#274D40] w-full h-[82px] sm:w-[100vw] md:w-[100vw]">
+                    <p class="text-center py-6 text-white text-[20px]">Copyright® 2024 TrailCO2 ❤</p>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER AKHIR -->
+
+        <script>
+            AOS.init({
+                once: true,
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="../script.js"></script>
     </body>
 </html>
