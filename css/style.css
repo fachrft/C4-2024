@@ -33,6 +33,10 @@
 }
 
 @media (max-width: 640px) {
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
     .hapus {
         display: none;
     }
