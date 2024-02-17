@@ -2,9 +2,22 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navMenu");
 
-
 hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("hidden");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            navbar.classList.remove("bg-transparent");
+            navbar.classList.add("bg-white-scroll");
+        } else {
+            navbar.classList.remove("bg-white-scroll");
+            navbar.classList.add("bg-transparent");
+        }
+    });
 });
 
 // modal box
@@ -130,9 +143,9 @@ var swiper = new Swiper(".mySwiper", {
 
 function toggleGordeng(isInit = false) {
     if (isInit) {
-        document.querySelector("body").style = "overflow-y: hidden;";
         setTimeout(() => {
             document.querySelector("body").style = "overflow-y: auto;";
+            document.querySelector("html").style = "overflow-y: auto; height: auto;";
         }, 3500);
     }
 }
