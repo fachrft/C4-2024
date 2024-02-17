@@ -134,14 +134,14 @@ AOS.init({
 
 function toggleGordeng(isInit = false) {
     if (isInit) {
-        document.querySelector("body").style = "overflow-y: hidden;";
+        document.querySelector("body").style = "overflow: hidden;";
         setTimeout(() => {
-            document.querySelector("body").style = "overflow-y: auto;";
+            document.querySelector("body").style = "overflow: auto;";
         }, 3500);
     }
 }
 
-// toggleGordeng(true);
+toggleGordeng(true);
 
 //open penjelasan
 const button = document.querySelector(".button-open-close");
