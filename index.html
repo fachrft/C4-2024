@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="website icon" type="png" href="./assets/logo.svg" />
         <title>Zero Cardn</title>
-        <link rel="stylesheet" href="./output.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
@@ -14,14 +13,12 @@
         <link rel="stylesheet" href="./css/style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-
-    <body class="overflow-x-hidden max-w-[100vw]">
+    <body>
         <!-------------------------- GORDENG -------------------------------->
         <div id="videoContainer" class="loader w-[100vw] h-[100vh] bg-[#EFF396] flex justify-center items-center fixed top-0 left-0 z-[100] max-w-[100vw] overflow-x-hidden">
             <video id="introVideo" width="400" height="350" autoplay muted>
                 <source src="./LOGO CARDN FIXX.mp4" type="video/mp4" />
             </video>
-            <div id="overlay"></div>
         </div>
         <!-------------------------- GORDENG SELESAI -------------------------------->
 
@@ -205,7 +202,7 @@
                         <h1 class="text-center">Gas Rumah Kaca (Global Warming)</h1>
                     </div>
                     <div class="flex items-center gap-2">
-                        <img class="bergerak w-[90px] cursor-pointer lg:w-[120px] globalWarming1" src="./assets/gw_1.svg" alt="" />
+                        <img class="bergerak w-[100px] cursor-pointer lg:w-[140px] globalWarming1" src="./assets/gw_1.svg" alt="" />
                         <img class="w-[90px] translate-y-5 lg:translate-y-12 cursor-pointer lg:w-[120px] globalWarming2" src="./assets/gw_2.svg" alt="" />
                         <img class="bergerak w-[90px] cursor-pointer lg:w-[120px] globalWarming3" src="./assets/gw_3.svg" alt="" />
                     </div>
@@ -592,14 +589,14 @@
             </div>
         </footer>
         <!-- FOOTER AKHIR -->
-
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             AOS.init({
                 once: true,
             });
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>

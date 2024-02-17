@@ -2,8 +2,8 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navMenu");
 
+
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("hamburger-active");
     navMenu.classList.toggle("hidden");
 });
 
@@ -128,15 +128,11 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
 });
 
-AOS.init({
-    once: true,
-});
-
 function toggleGordeng(isInit = false) {
     if (isInit) {
-        document.querySelector("body").style = "overflow-x: hidden;";
+        document.querySelector("body").style = "overflow-y: hidden;";
         setTimeout(() => {
-            document.querySelector("body").style = "overflow-x: auto;";
+            document.querySelector("body").style = "overflow-y: auto;";
         }, 3500);
     }
 }
