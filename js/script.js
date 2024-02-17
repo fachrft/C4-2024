@@ -141,7 +141,7 @@ function toggleGordeng(isInit = false) {
     }
 }
 
-toggleGordeng(true);
+// toggleGordeng(true);
 
 //open penjelasan
 const button = document.querySelector(".button-open-close");
@@ -159,18 +159,18 @@ button.addEventListener("click", () => {
 
 // pop up penjelasan
 const ramahPengguna = document.querySelector(".button-ramah-pengguna");
-const aksesibilitas = document.querySelector('.button-aksesibilitas');
-const penyesuaian = document.querySelector('.button-penyesuaian');
-const pelacakan = document.querySelector('.button-pelacakan');
-const feedback = document.querySelector('.button-feedback');
-const integrasi = document.querySelector('.button-integrasi');
+const aksesibilitas = document.querySelector(".button-aksesibilitas");
+const penyesuaian = document.querySelector(".button-penyesuaian");
+const pelacakan = document.querySelector(".button-pelacakan");
+const feedback = document.querySelector(".button-feedback");
+const integrasi = document.querySelector(".button-integrasi");
 
 const showP1 = document.querySelector(".show-prototype-1");
-const showP2 = document.querySelector(".show-prototype-2")
-const showP3 = document.querySelector(".show-prototype-3")
-const showP4 = document.querySelector(".show-prototype-4")
-const showP5 = document.querySelector(".show-prototype-5")
-const showP6 = document.querySelector(".show-prototype-6")
+const showP2 = document.querySelector(".show-prototype-2");
+const showP3 = document.querySelector(".show-prototype-3");
+const showP4 = document.querySelector(".show-prototype-4");
+const showP5 = document.querySelector(".show-prototype-5");
+const showP6 = document.querySelector(".show-prototype-6");
 
 // show 1
 ramahPengguna.addEventListener("click", () => {
@@ -260,4 +260,3 @@ integrasi.addEventListener("click", () => {
         document.querySelector("body").style = "overflow-y: auto;";
     });
 });
-
