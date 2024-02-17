@@ -82,6 +82,7 @@ html {
 
 .container-penjelasan {
     left: -100%;
+    overflow: hidden;
 }
 
 .open-penjelasan {
